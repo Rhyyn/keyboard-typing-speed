@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: #022b3a;
+}
+
+#pageContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keyboardContainer {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: 1px solid green; */
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+}
+
+.key {
+  width: 4.7rem;
+  height: 4.7rem;
+  background-color: #50707b;
+  border-radius: 10px;
+  /* transform: skew(-10deg); */
+  margin: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.largeKey {
+  width: calc(9.5rem);
+  height: 4.7rem;
+  background-color: #50707b;
+  border-radius: 10px;
+  /* transform: skew(-10deg); */
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pressed {
+  background-color: #395058;
+  scale: 0.9;
+}
+
+
+

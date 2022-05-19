@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: #022b3a;
+  font-family: 'Roboto Flex', sans-serif;
 }
 
 #pageContainer{
@@ -10,6 +11,28 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.randomWordsContainer {
+  width: 50%;
+  max-height: 70px;
+  overflow: hidden;
+  color: white;
+  padding: 1rem;
+  outline: 1px solid red;
+  font-size: 2rem;
+} 
+
+.word {
+  padding-right: 1rem;
+}
+
+.input{
+  width: 30%;
+  height: 20px;
+  font-family: 'Roboto Flex', sans-serif;
+  margin: 1rem;
 }
 
 .keyboardContainer {
@@ -26,6 +49,8 @@ body {
   display: flex;
   text-align: center;
 }
+
+/* --- KEY STUFFS --- */
 
 .key {
   width: 4.7rem;

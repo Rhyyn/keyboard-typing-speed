@@ -28,7 +28,7 @@ body {
   padding-right: 1rem;
 }
 
-.input{
+#userInput{
   width: 30%;
   height: 20px;
   font-family: 'Roboto Flex', sans-serif;

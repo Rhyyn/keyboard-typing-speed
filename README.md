@@ -6,4 +6,4 @@ See your typing speed with a keyboard !
 ## TODO :
 - Logic to remove words user wrote from array
 - Logic to verify user input against current word
-- Styling accrossthe App
+- Styling accross the App

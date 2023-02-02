@@ -1,6 +1,6 @@
 import keyList from "../keyList.json";
 import RandomWords from "./randomWords";
-import React, { RefObject, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Input from "./input";
 
 const keyboard = () => {
@@ -26,7 +26,7 @@ const keyboard = () => {
         window.addEventListener("keydown", (event) => {
             // event listener on keydown
             let keyPressed: string = event.key.toUpperCase(); // get key user pressed and set it to UpperCase
-            if (keyPressed !== null) {
+            if (event.key && keyPressed !== null) {
                 keysRefs.current &&
                     keysRefs.current.map((item: any, index: number) => {
                         // map through refs and find the element that match user key
@@ -40,16 +40,13 @@ const keyboard = () => {
 
         window.addEventListener("keyup", (event) => {
             // event listener on keyup
-            console.log(handleInputRef?.current?.value);
             let keyPressed: string = event.key.toUpperCase(); // get key user pressed and set it to UpperCase
-            if (keyPressed !== null) {
+            if (event.key && keyPressed !== null) {
                 keysRefs.current &&
                     keysRefs.current.map((item: any, index: number) => {
                         // map through refs and find the element that match user key
                         if (item.id && item.id === keyPressed) {
-                            // console.log(item.classList);
                             item.classList.remove("pressed"); // remove class pressed for visual feedback to the user
-                            console.log(keysRefs.current);
                         }
                     });
             }

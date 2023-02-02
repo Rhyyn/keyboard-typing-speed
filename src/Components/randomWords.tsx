@@ -6,6 +6,7 @@ const randomWords = () => {
     let randomWords: any[] = []; // define aray for random picked words
     let refs = useRef([]); // define refs
     let currentRefs: string[] = refs.current; // define array for refs
+    // console.log(refs.current);
 
 
     function getRandom(arr:Array<string>, n:number) { // get a random number (n) of items in a given array (arr)
@@ -31,7 +32,7 @@ const randomWords = () => {
     return (
         <div className='randomWordsContainer'>
                 {randomWords[0].map((item:string, index:number) => { // map through the random selected words
-                    return <span ref={addRefs} className='word' key={index}>{item}</span>
+                    return <span ref={addRefs} className={`word ${item}`} key={index}>{item}</span>
                 })}
         </div>
     )

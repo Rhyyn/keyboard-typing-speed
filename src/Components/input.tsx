@@ -1,14 +1,27 @@
 import React from "react";
+import { useState, useRef } from "react";
 
-const input = React.forwardRef((props, ref: any) => { // forward ref to keyboard component
+const input = React.forwardRef((_, ref) => {
+    const [currValue, setCurrValue] = useState("");
 
+    const handleChange = (event: any) => {
+        document.addEventListener("keyup", (event) => {
+            if (event.code === "Space") {
+                setCurrValue("");
+            }
+        });
+
+        setCurrValue(event.target.value);
+    };
 
     return (
-        <React.Fragment>
-            <input  ref={ref} className="input"></input>
-        </React.Fragment>
-
-    )
-})
+        <input
+            id="userInput"
+            value={currValue}
+            onChange={(event) => handleChange(event)}
+            ref={ref as React.LegacyRef<HTMLInputElement>}
+        ></input>
+    );
+});
 
 export default input;
